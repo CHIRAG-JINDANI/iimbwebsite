@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Resume Website: CSS Styling Assignment - Chirag Jindani (26120364)</title>
+  <title>Web Development Midterm Assignment - Chirag Jindani (26120364)</title>
   <style>
     @page {
       size: A4;
-      margin: 10mm 12mm;
+      margin: 12mm 15mm;
     }
     * {
       box-sizing: border-box;
@@ -14,16 +14,16 @@
       padding: 0;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 8.2pt;
-      line-height: 1.36;
-      color: #111111;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8.8pt;
+      line-height: 1.42;
+      color: #000000;
       background: #ffffff;
       -webkit-font-smoothing: antialiased;
     }
     .page {
-      height: 277mm;
-      max-height: 277mm;
+      height: 273mm;
+      max-height: 273mm;
       position: relative;
       overflow: hidden;
       display: flex;
@@ -38,139 +38,105 @@
       flex: 1;
     }
 
-    /* Header Top Block */
-    .top-header {
-      border-bottom: 1.5px solid #111111;
-      padding-bottom: 5px;
-      margin-bottom: 7px;
+    /* Top Header */
+    .header-block {
+      margin-bottom: 10px;
     }
-    .doc-title {
-      font-size: 13pt;
-      font-weight: 800;
+    .main-title {
+      font-size: 15pt;
+      font-weight: 700;
       color: #000000;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
+      line-height: 1.2;
+      margin-bottom: 5px;
     }
-    .doc-sub {
-      font-size: 8.5pt;
-      font-weight: 600;
-      color: #222222;
-      margin-top: 1px;
+    .info-list {
+      font-size: 8.8pt;
+      line-height: 1.45;
+      color: #000000;
+      margin-bottom: 8px;
     }
-    .link-row {
-      font-size: 8pt;
-      margin-top: 2px;
-      line-height: 1.35;
-      color: #111111;
-    }
-    .link-row strong {
+    .info-list strong {
       font-weight: 700;
       color: #000000;
     }
-    .link-url {
-      color: #0b57d0;
+    .link-text {
+      color: #0044cc;
       text-decoration: underline;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 7.8pt;
+      font-family: Arial, Helvetica, sans-serif;
+      word-break: break-all;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #000000;
+      margin: 6px 0 8px 0;
     }
 
     h2 {
-      font-size: 9pt;
-      font-weight: 800;
+      font-size: 10pt;
+      font-weight: 700;
       color: #000000;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      border-bottom: 1px solid #222222;
-      padding-bottom: 2px;
-      margin-top: 6px;
-      margin-bottom: 4px;
+      margin-top: 9px;
+      margin-bottom: 5px;
     }
     p {
-      margin-bottom: 4px;
+      margin-bottom: 5px;
       text-align: justify;
-      color: #111111;
+      color: #000000;
     }
     ul {
-      margin-left: 14px;
-      margin-bottom: 4px;
+      margin-left: 16px;
+      margin-bottom: 6px;
     }
     li {
-      margin-bottom: 2.5px;
-      color: #111111;
-      line-height: 1.32;
+      margin-bottom: 3.5px;
+      color: #000000;
+      line-height: 1.38;
     }
     strong {
       font-weight: 700;
       color: #000000;
     }
 
-    /* Structured Section Table */
-    .section-table {
+    /* Simple Table */
+    .table-wrap {
+      width: 100%;
+      margin: 5px 0 8px 0;
+    }
+    table.simple-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 7.4pt;
-      margin-top: 4px;
-      margin-bottom: 6px;
-      border: 1px solid #111111;
+      font-size: 8pt;
+      border: 1px solid #000000;
     }
-    .section-table th, .section-table td {
-      border: 1px solid #333333;
-      padding: 3.5px 5.5px;
+    table.simple-table th, table.simple-table td {
+      border: 1px solid #444444;
+      padding: 4px 6px;
       vertical-align: top;
       text-align: left;
     }
-    .section-table th {
+    table.simple-table th {
       background-color: #f2f2f2;
       color: #000000;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
+      font-weight: 700;
+      font-size: 8pt;
     }
-    .section-table td.sec-name {
-      font-weight: 800;
-      color: #000000;
-      white-space: nowrap;
+    table.simple-table td.col-sec {
+      font-weight: 700;
       width: 14%;
     }
-    .section-table td.sec-shows {
+    table.simple-table td.col-shows {
       width: 43%;
-      color: #222222;
     }
-    .section-table td.sec-decision {
+    table.simple-table td.col-dec {
       width: 43%;
-      color: #222222;
-    }
-
-    /* Technical Summary Table */
-    .tech-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 7.3pt;
-      margin-top: 3px;
-      margin-bottom: 5px;
-      border: 1px solid #111111;
-    }
-    .tech-table th, .tech-table td {
-      border: 1px solid #333333;
-      padding: 3px 5px;
-      vertical-align: middle;
-      text-align: left;
-    }
-    .tech-table th {
-      background-color: #f2f2f2;
-      color: #000000;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
     }
 
     /* Footer */
     .footer-doc {
-      border-top: 1px solid #111111;
-      padding-top: 3px;
-      font-size: 7pt;
-      font-weight: 600;
-      color: #333333;
+      border-top: 1px solid #666666;
+      padding-top: 4px;
+      font-size: 7.5pt;
+      color: #444444;
       display: flex;
       justify-content: space-between;
       margin-top: 4px;
@@ -182,175 +148,136 @@
   <!-- ================= PAGE 1 ================= -->
   <div class="page">
     <div class="content-wrap">
-      <div class="top-header">
-        <div class="doc-title">Resume Website: CSS Styling Assignment</div>
-        <div class="doc-sub">Chirag Jindani | Roll No: 26120364 | Web Development Mid-Term Project | IIM Bangalore BBA DBE</div>
-        <div class="link-row">
-          <strong>Live Website:</strong> <a href="https://chirag-jindani.github.io/iimbwebsite/" class="link-url">https://chirag-jindani.github.io/iimbwebsite/</a> &nbsp;|&nbsp; 
-          <strong>GitHub Repository:</strong> <a href="https://github.com/CHIRAG-JINDANI/iimbwebsite" class="link-url">https://github.com/CHIRAG-JINDANI/iimbwebsite</a>
+      <div class="header-block">
+        <h1 class="main-title">Web Development Midterm Assignment</h1>
+        <div class="info-list">
+          <div><strong>Name:</strong> Chirag Jindani</div>
+          <div><strong>Roll Number:</strong> 26120364</div>
+          <div><strong>Course:</strong> BBA in Digital Business and Entrepreneurship, IIM Bangalore</div>
+          <div><strong>Live Website Link:</strong> <a href="https://chirag-jindani.github.io/iimbwebsite/" class="link-text">https://chirag-jindani.github.io/iimbwebsite/</a></div>
+          <div><strong>GitHub Repository Link:</strong> <a href="https://github.com/CHIRAG-JINDANI/iimbwebsite" class="link-text">https://github.com/CHIRAG-JINDANI/iimbwebsite</a></div>
         </div>
-        <div class="link-row">
-          <strong>Featured Live Projects:</strong> GeoRef Tool (<a href="https://georef-tool.vercel.app" class="link-url">georef-tool.vercel.app</a>) &nbsp;|&nbsp; SPLNDSTUDIOS (<a href="https://splndstudios.framer.website" class="link-url">splndstudios.framer.website</a>)
-        </div>
+        <hr class="divider">
       </div>
 
-      <h2>Sections of the Website and Why I Designed Them This Way</h2>
-      <table class="section-table">
-        <thead>
-          <tr>
-            <th>Section</th>
-            <th>What It Shows</th>
-            <th>Design Decision &amp; Styling Rationale</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="sec-name">Hero</td>
-            <td class="sec-shows">Status pulse badge, name headline, dynamic typewriter cycling through engineering roles, dual-degree pitch, CTA buttons, and cropped portrait stage.</td>
-            <td class="sec-decision">The name is prioritized with bold geometric hierarchy. The right column uses an offset obsidian monolith, rotating dashed crimson accent ring, and floating credential badges with <code>transform: scale(2.05)</code> close-up framing.</td>
-          </tr>
-          <tr>
-            <td class="sec-name">Metrics</td>
-            <td class="sec-shows">Four quantified milestone counters: &lt;30s georeferencing, 2 internships, dual degree (GSV + IIMB), and 100% scratched builds.</td>
-            <td class="sec-decision">Constructed as a full-width high-contrast data ribbon between sections using Flexbox space-around alignment, ensuring quantitative impact is immediately scannable.</td>
-          </tr>
-          <tr>
-            <td class="sec-name">About &amp; Timeline</td>
-            <td class="sec-shows">Philosophy on solving problem statements from scratch, highlight chips, dual academic progression, and Literary Club Co-Coordinator leadership role.</td>
-            <td class="sec-decision">Asymmetric 2-column grid. Left card handles long-form narrative; right column houses a custom CSS vertical timeline with pulsing pseudo-element markers and leadership credentials.</td>
-          </tr>
-          <tr>
-            <td class="sec-name">Experience</td>
-            <td class="sec-shows">Summer Internships at BISAG-N (satellite image GeoTIFF automation) and Indian Railways (operational systems immersion).</td>
-            <td class="sec-decision">Structured chronological cards with custom badge monograms, date/location metadata chips, deliverable lists with crimson arrow markers, and technical tag pills.</td>
-          </tr>
-          <tr>
-            <td class="sec-name">Selected Builds</td>
-            <td class="sec-shows">Dual featured works: <strong>GeoRef Tool</strong> (Computer Vision &amp; geospatial pipeline) and <strong>SPLNDSTUDIOS</strong> (Framer/Figma interaction design &amp; building in public).</td>
-            <td class="sec-decision">Dual cards styled with macOS-style browser frames (colored dots, address bar), 3-metric KPI boxes (speedup, time, cost), live demo triggers, and verified LinkedIn proof quotes.</td>
-          </tr>
-          <tr>
-            <td class="sec-name">Skills Matrix</td>
-            <td class="sec-shows">Categorized competencies spanning AI &amp; Deep Learning, Software &amp; Web Dev, Product UI/UX, and Business Strategy.</td>
-            <td class="sec-decision">Multi-column card grid controlled by an interactive filter bar. JavaScript DOM manipulation dynamically switches visible domains without page reload.</td>
-          </tr>
-          <tr>
-            <td class="sec-name">Creative</td>
-            <td class="sec-shows">VSCO Photography gallery, Instagram short-form reels, and tactical strategy in Chess and Football.</td>
-            <td class="sec-decision">Three distinct cards balancing technical engineering with artistic perspective. Emphasizes composition, visual storytelling, and spatial decision-making.</td>
-          </tr>
-          <tr>
-            <td class="sec-name">Contact</td>
-            <td class="sec-shows">Direct email, phone number, location, 1-click copy-to-clipboard buttons, and LinkedIn/GitHub connection triggers.</td>
-            <td class="sec-decision">High-impact card anchored at the bottom. Replaces intrusive external mail-client launching with smooth in-page scrolling and instant clipboard feedback.</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Introduction</h2>
+      <p>
+        The objective of this midterm assignment was to enhance the resume website built during the HTML module by applying CSS styling, layout techniques, typography, and responsive design. The website reflects my dual academic background—pursuing a B.Tech in Artificial Intelligence &amp; Data Science at Gati Shakti Vishwavidyalaya alongside a BBA in Digital Business &amp; Entrepreneurship at IIM Bangalore. My goal was to create a clean, modern, and professional resume website that clearly presents my technical internships, projects, skills, and creative interests.
+      </p>
 
-      <h2>Key Improvements Made</h2>
+      <h2>Sections of the website and why I designed them this way</h2>
+      <div class="table-wrap">
+        <table class="simple-table">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>What it shows</th>
+              <th>Design decision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-sec">Hero</td>
+              <td class="col-shows">My name, a role typewriter, open-for-internships badge, intro bio, action buttons, and my portrait photo.</td>
+              <td class="col-dec">The name is bold and clear so it stands out immediately. The photo is cropped close to the face and upper suit so it looks like a clean headshot.</td>
+            </tr>
+            <tr>
+              <td class="col-sec">Metrics</td>
+              <td class="col-shows">Four key numbers: &lt;30s satellite processing, 2 internships, dual degree, and 100% scratched builds.</td>
+              <td class="col-dec">Shown in a horizontal ribbon between sections using flexbox so achievements can be read in a few seconds.</td>
+            </tr>
+            <tr>
+              <td class="col-sec">About</td>
+              <td class="col-shows">My background in AI and digital business, my college journey, and my role as Literary Club Co-Coordinator.</td>
+              <td class="col-dec">Two columns: the story on the left and a vertical timeline on the right so academic details stay neat and easy to follow.</td>
+            </tr>
+            <tr>
+              <td class="col-sec">Experience</td>
+              <td class="col-shows">Summer internships at BISAG-N (satellite image automation) and Indian Railways (operational systems).</td>
+              <td class="col-dec">Separate cards with dates, role titles, and bullet points explaining the exact problem solved and tools used.</td>
+            </tr>
+            <tr>
+              <td class="col-sec">Projects</td>
+              <td class="col-shows">GeoRef Tool: a web tool converting raw satellite imagery into georeferenced GeoTIFF in under 30 seconds.</td>
+              <td class="col-dec">Styled with a browser-style preview frame, three key metrics, and direct links to the live tool and GitHub repository.</td>
+            </tr>
+            <tr>
+              <td class="col-sec">Skills</td>
+              <td class="col-shows">Four categories: AI &amp; Deep Learning, Software &amp; Web Dev, Product UI, and Strategy &amp; Communication.</td>
+              <td class="col-dec">Four cards with pill tags instead of one long list. Added filter buttons at the top to quickly view specific skill areas.</td>
+            </tr>
+            <tr>
+              <td class="col-sec">Creative</td>
+              <td class="col-shows">VSCO photography gallery, Instagram reels, and tactical strategy in Chess and Football.</td>
+              <td class="col-dec">Three distinct cards to show creative storytelling and personal hobbies alongside technical engineering.</td>
+            </tr>
+            <tr>
+              <td class="col-sec">Contact</td>
+              <td class="col-shows">Email address, phone number, location, and links to LinkedIn and GitHub.</td>
+              <td class="col-dec">A dedicated card at the bottom with one-click copy buttons for email and phone so visitors can reach out easily.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Improvements made</h2>
       <ul>
-        <li><strong>Centralized CSS Architecture:</strong> Replaced inline styling with a dedicated external stylesheet (<code>style.css</code>). Design tokens—including deep obsidian black (<code>#070709</code>), rich burgundy maroon (<code>#851224</code>), crimson accents (<code>#d82b42</code>), spacing scales, and radii—are organized into CSS custom variables (<code>:root</code>) for unified maintainability.</li>
-        <li><strong>Minimalist Typography System:</strong> Standardized on <em>Plus Jakarta Sans</em> across all headings, body text, typewriter elements, and badges. Eliminates quirky, distracting fonts in favor of clean geometric letterforms, calibrated line heights (1.65), and negative tracking (<code>-0.03em</code>) for a sleek executive aesthetic.</li>
-        <li><strong>Zero-Latency Navigation &amp; Scrollspy:</strong> Optimized navigation clicks to trigger immediate 60fps smooth scrolling with 0ms delay. Active section tracking is driven by browser-native <code>IntersectionObserver</code>, completely eliminating layout-thrashing scroll event listeners.</li>
-        <li><strong>Non-Intrusive Call-to-Action:</strong> Resolved desktop mail client latency by redirecting the header "Let's Connect" button to smoothly scroll to the <code>#contact</code> card, where visitors can copy verified contact details with a single click.</li>
-        <li><strong>Cropped Editorial Portrait Stage:</strong> Reconfigured the profile composition to an executive 4:5 ratio, using <code>object-position: center 54%</code> and <code>transform: scale(2.05)</code> to bring direct focus to the headshot rather than distant background scenery.</li>
+        <li><strong>Separate stylesheet:</strong> Moved all CSS rules into an external file (<code>style.css</code>) and linked it in <code>index.html</code>. Colors, fonts, and spacing are defined as CSS variables at the top of the file so they can be managed in one place.</li>
+        <li><strong>Clean typography:</strong> Used <em>Plus Jakarta Sans</em> for headings, body copy, and UI labels. It keeps the text sharp, readable, and consistent across every section of the website.</li>
+        <li><strong>Dark maroon color theme:</strong> Built around an obsidian black background with maroon red as the main theme and subtle crimson accents for buttons, borders, and badges. Included a dark/light mode toggle with preference saved in the browser.</li>
       </ul>
     </div>
 
     <div class="footer-doc">
-      <span>Website Development Mid-Term Assignment — Chirag Jindani (Roll No: 26120364)</span>
+      <span>Web Development Midterm Assignment — Chirag Jindani</span>
       <span>Page 1 of 2</span>
-      <span>IIM Bangalore BBA DBE</span>
     </div>
   </div>
 
   <!-- ================= PAGE 2 ================= -->
   <div class="page">
     <div class="content-wrap">
-      <div class="top-header">
-        <div class="doc-title">Resume Website: CSS Styling Assignment (Continued)</div>
-        <div class="doc-sub">Technical Rationale, CSS Concepts &amp; Personalization Philosophy</div>
+      <div class="header-block">
+        <h1 class="main-title">Web Development Midterm Assignment</h1>
+        <div class="info-list">
+          <div><strong>Chirag Jindani</strong> | Roll Number: 26120364 | IIM Bangalore BBA DBE</div>
+        </div>
+        <hr class="divider">
       </div>
 
-      <h2>CSS Concepts &amp; Syllabus Alignment</h2>
-      <div class="table-container">
-        <table class="tech-table">
-          <thead>
-            <tr>
-              <th style="width: 24%;">CSS Concept Domain</th>
-              <th style="width: 40%;">Technical Application on the Website</th>
-              <th style="width: 36%;">Curriculum &amp; Code Evidence</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Selectors Hierarchy</strong></td>
-              <td>Combines element resets (<code>html, body, p</code>), ~120 modular class selectors (<code>.exp-card</code>, <code>.btn-primary</code>), unique ID anchors (<code>#projects</code>), and attribute selectors.</td>
-              <td>Element, class, ID selectors, attribute matching (<code>[data-theme="dark"]</code>), and descendant combinators (Module 4).</td>
-            </tr>
-            <tr>
-              <td><strong>Display &amp; Layout Systems</strong></td>
-              <td>Employs CSS Grid for responsive 2-column hero, 3-column project KPI boxes, and multi-card matrix; Flexbox for navigation, badges, and ribbons.</td>
-              <td><code>display: grid</code>, <code>grid-template-columns</code>, <code>display: flex</code>, <code>justify-content: space-between</code>, <code>gap</code> (Module 5).</td>
-            </tr>
-            <tr>
-              <td><strong>Positioning Properties</strong></td>
-              <td>Sticky glassmorphic navbar (<code>position: sticky; top: 0</code>), floating credential badges on portrait stage, and fixed back-to-top button.</td>
-              <td><code>position: sticky</code>, <code>absolute</code>, <code>fixed</code>, <code>relative</code>, with strict <code>z-index</code> stacking context (Module 4.14).</td>
-            </tr>
-            <tr>
-              <td><strong>Box Model &amp; Visual Flow</strong></td>
-              <td>Standardized box-sizing, fluid clamp padding, rounded corner tokens (8px to 9999px), and subtle inset card shadows.</td>
-              <td><code>box-sizing: border-box</code>, <code>padding</code>, <code>margin</code>, <code>border-radius</code>, <code>box-shadow</code> (Module 4.7).</td>
-            </tr>
-            <tr>
-              <td><strong>Pseudo-Classes &amp; Elements</strong></td>
-              <td>Interactive hover button elevations, active nav link underlines, list bullet markers, and pulse beacons.</td>
-              <td><code>:hover</code>, <code>:focus-visible</code>, <code>:active</code>, <code>::before</code>, <code>::after</code>, and <code>::selection</code> (Module 4.10).</td>
-            </tr>
-            <tr>
-              <td><strong>Keyframe Animations</strong></td>
-              <td>Ambient breathing glow orbs, rotating dashed ring, typewriter cursor blinking, and status dot pulsing.</td>
-              <td><code>@keyframes pulseDot</code>, <code>rotateClockwise</code>, <code>pulseGlow</code>, with hardware-accelerated <code>transform</code> (Module 4 &amp; 5).</td>
-            </tr>
-            <tr>
-              <td><strong>Responsive Media Queries</strong></td>
-              <td>Comprehensive breakpoint rules reflowing the desktop 2-column hero to stacked mobile view and opening the hamburger drawer.</td>
-              <td><code>@media (max-width: 1024px)</code>, <code>@media (max-width: 768px)</code>, fluid <code>clamp()</code> typography (Module 5.3).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>User Experience &amp; Interactive Polish</h2>
+      <h2>Improvements made (continued)</h2>
       <ul>
-        <li><strong>Dual-Theme Switcher:</strong> Provides native Dark Maroon and Crimson Light modes. The selected theme toggles the root <code>[data-theme]</code> attribute and persists across sessions via <code>localStorage</code>.</li>
-        <li><strong>Interactive Skills Filtering:</strong> Filter tabs (All, AI &amp; DS, Software &amp; Web, Business &amp; Creative) use vanilla JavaScript DOM methods (<code>classList</code>, <code>style.display</code>) for instantaneous visual sorting.</li>
-        <li><strong>One-Click Clipboard API:</strong> Integrated on email and phone rows in the contact card, featuring a 2-second visual "Copied!" confirmation badge and automatic state restoration.</li>
-        <li><strong>Throttled Back-to-Top Control:</strong> Employs <code>requestAnimationFrame</code> to toggle floating button visibility after 400px scroll depth, executing smooth window scrolling to top on click.</li>
+        <li><strong>Sticky navigation bar:</strong> Stays visible at the top of the page while scrolling using <code>position: sticky</code> and flexbox. Links jump smoothly to sections with zero lag. On mobile screens, it automatically turns into a hamburger menu.</li>
+        <li><strong>Responsive layout:</strong> Used CSS Grid for cards and Flexbox for buttons and alignment. Tested with media queries so the page reflows into a single column on tablets and mobile phones.</li>
+        <li><strong>Fast interactions:</strong> Added a dynamic typewriter effect in the hero section, one-click copy buttons for email and phone with instant feedback, and a back-to-top button that appears after scrolling down.</li>
       </ul>
 
-      <h2>Content Personalization &amp; Design Philosophy</h2>
+      <h2>CSS concepts used</h2>
+      <ul>
+        <li><strong>Selectors:</strong> Element selectors for global styling (<code>body</code>, <code>h1</code>–<code>h4</code>, <code>p</code>, <code>a</code>, <code>button</code>), class selectors for components like cards and buttons, ID selectors for section links (<code>#about</code>, <code>#experience</code>, <code>#projects</code>, <code>#contact</code>), and attribute selectors for the theme switcher (<code>[data-theme="dark"]</code>).</li>
+        <li><strong>Display and position:</strong> <code>display: flex</code> for the navigation bar, buttons, and metrics ribbon. <code>display: grid</code> for the hero layout, about grid, and skills cards. <code>position: sticky</code> for the header, <code>position: fixed</code> for the back-to-top button, and <code>position: relative</code>/<code>absolute</code> for the badges on the photo stage.</li>
+        <li><strong>Box model and spacing:</strong> Standardized margin, padding, border-radius, and border properties across cards. Used CSS variables to keep spacing consistent across the site.</li>
+        <li><strong>Transitions and animations:</strong> Smooth hover effects on buttons and cards, a rotating dashed ring behind the photo, and subtle keyframe animations for the background glow.</li>
+        <li><strong>Media queries:</strong> Breakpoints at 1024px and 768px to ensure the layout, fonts, and navigation adjust cleanly on mobile, tablet, and desktop screens.</li>
+      </ul>
+
+      <h2>Design decisions</h2>
       <p>
-        Every element of the portfolio is tailored to authentically reflect my background, problem-solving drive, and dual academic journey:
+        I wanted the website to feel professional and technical, while remaining personal and easy to navigate. I chose a dark background with maroon red accents because it looks focused and matches the technical nature of AI and data science. Instead of using unusual or complex fonts, I selected <em>Plus Jakarta Sans</em> for its clean, geometric lines and high readability.
       </p>
-      <ul>
-        <li><strong>Engineering from Scratch:</strong> Rather than generic web templates, the site embodies my experience as an AI &amp; Data Science student at Gati Shakti Vishwavidyalaya and a Digital Business student at IIM Bangalore. It highlights solving real operational friction—such as converting raw satellite rasters into georeferenced GeoTIFFs in under 30 seconds at BISAG-N.</li>
-        <li><strong>Building in Public (SPLNDSTUDIOS):</strong> Demonstrates entrepreneurial initiative by including my sophomore-year design studio experiment, highlighting transparent iteration, rapid prototyping in Framer and Figma, and overcoming the hesitation of shipping early in public.</li>
-        <li><strong>Creative &amp; Strategic Perspectives:</strong> Showcases visual composition through my curated VSCO photography archive and short-form reels, alongside tactical problem-solving cultivated through competitive chess and football.</li>
-        <li><strong>Color Theory Rationale:</strong> In alignment with Module 2.4, the deep obsidian background and crimson maroon accents convey technological rigor and analytical focus while maintaining accessible contrast ratios.</li>
-      </ul>
+      <p>
+        For the layout, each section is separated clearly with simple cards and borders so recruiters and visitors can scan information quickly without unnecessary clutter. Cards are used for grouping skills, internships, and creative work, while key achievements are highlighted using numbers and short tags.
+      </p>
 
       <h2>Conclusion</h2>
       <p>
-        Developing and deploying this portfolio on GitHub Pages unified the concepts taught across Modules 1 through 7—solidifying practical mastery over semantic HTML5 structure, CSS Grid/Flexbox architecture, positioning hierarchies, and vanilla JavaScript DOM manipulation. The resulting platform bridges technical precision with entrepreneurial storytelling, presenting a cohesive, high-performance representation of my academic and professional trajectory.
+        This assignment helped me apply semantic HTML, CSS layout systems (Grid and Flexbox), positioning, and responsive design in a real project. Moving from basic HTML to a fully styled and hosted website showed me how thoughtful design choices, clear spacing, and clean code make a resume both functional and engaging. The final website is deployed on GitHub Pages and tested across desktop and mobile devices.
       </p>
     </div>
 
     <div class="footer-doc">
-      <span>Website Development Mid-Term Assignment — Chirag Jindani (Roll No: 26120364)</span>
+      <span>Web Development Midterm Assignment — Chirag Jindani</span>
       <span>Page 2 of 2</span>
-      <span>IIM Bangalore BBA DBE</span>
     </div>
   </div>
 
