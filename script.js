@@ -6,7 +6,30 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- 1. THEME SWITCHER (Dark Maroon / Crimson Light) ---------- */
+  /* ---------- 1. INSTANT SMOOTH ANCHOR NAVIGATION (0ms Latency) ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#' || !targetId) return;
+
+      const targetElem = document.querySelector(targetId);
+      if (targetElem) {
+        e.preventDefault();
+        targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // If mobile drawer was open, close it instantly
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          if (menuToggle) {
+            menuToggle.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      }
+    });
+  });
+
+  /* ---------- 2. THEME SWITCHER (Dark Maroon / Crimson Light) ---------- */
   const themeToggle = document.getElementById('theme-toggle');
   const htmlRoot = document.documentElement;
 
@@ -23,10 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 2. MOBILE NAVIGATION DRAWER ---------- */
+  /* ---------- 3. MOBILE NAVIGATION DRAWER ---------- */
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener('click', () => {
@@ -41,18 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.setAttribute('aria-expanded', 'true');
       }
     });
-
-    // Close menu when clicking any mobile link
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        menuToggle.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
   }
 
-  /* ---------- 3. DYNAMIC TYPEWRITER EFFECT ---------- */
+  /* ---------- 4. DYNAMIC CLEAN TYPEWRITER EFFECT ---------- */
   const typewriterElement = document.getElementById('typewriter');
   const phrases = [
     'AI & Data Science solutions.',
@@ -65,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let phraseIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  let typingSpeed = 80;
+  let typingSpeed = 70;
 
   function typeEffect() {
     if (!typewriterElement) return;
@@ -75,21 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isDeleting) {
       typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
       charIndex--;
-      typingSpeed = 40;
+      typingSpeed = 35;
     } else {
       typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
       charIndex++;
-      typingSpeed = 90;
+      typingSpeed = 80;
     }
 
     if (!isDeleting && charIndex === currentPhrase.length) {
-      // Pause at end of phrase
-      typingSpeed = 1600;
+      typingSpeed = 1800; // Pause at end of phrase
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      typingSpeed = 400;
+      typingSpeed = 350;
     }
 
     setTimeout(typeEffect, typingSpeed);
@@ -97,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   typeEffect();
 
-  /* ---------- 4. SKILLS FILTER TABS ---------- */
+  /* ---------- 5. SKILLS FILTER TABS ---------- */
   const filterButtons = document.querySelectorAll('.filter-btn');
   const skillCards = document.querySelectorAll('.skill-category-card');
 
@@ -112,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const category = card.getAttribute('data-category');
         if (filterValue === 'all' || category === filterValue) {
           card.style.display = 'block';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
         } else {
           card.style.display = 'none';
         }
@@ -120,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- 5. COPY TO CLIPBOARD BUTTONS ---------- */
+  /* ---------- 6. COPY TO CLIPBOARD (Instant Feedback) ---------- */
   const copyButtons = document.querySelectorAll('.copy-btn');
 
   copyButtons.forEach(btn => {
@@ -139,9 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
           if (textSpan) textSpan.textContent = originalText;
           btn.style.backgroundColor = '';
           btn.style.color = '';
-        }, 2000);
+        }, 1800);
       } catch (err) {
-        // Fallback for older browsers
+        // Fallback for older environments
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
         document.body.appendChild(textarea);
@@ -152,45 +163,57 @@ document.addEventListener('DOMContentLoaded', () => {
         if (textSpan) textSpan.textContent = 'Copied!';
         setTimeout(() => {
           if (textSpan) textSpan.textContent = originalText;
-        }, 2000);
+        }, 1800);
       }
     });
   });
 
-  /* ---------- 6. ACTIVE NAVIGATION SCROLLSPY ---------- */
-  const sections = document.querySelectorAll('section[id]');
+  /* ---------- 7. ZERO-LAG ACTIVE SCROLLSPY (IntersectionObserver) ---------- */
   const desktopNavLinks = document.querySelectorAll('.nav-desktop .nav-link');
+  const observedSections = document.querySelectorAll('section[id]');
 
-  function updateActiveNavLink() {
-    const scrollY = window.pageYOffset + 120;
+  if ('IntersectionObserver' in window && observedSections.length > 0) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -50% 0px',
+      threshold: 0
+    };
 
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop;
-      const sectionId = current.getAttribute('id');
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          desktopNavLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
 
-      if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
-        desktopNavLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
+    observedSections.forEach(sec => sectionObserver.observe(sec));
   }
 
-  window.addEventListener('scroll', updateActiveNavLink, { passive: true });
-
-  /* ---------- 7. BACK TO TOP BUTTON ---------- */
+  /* ---------- 8. BACK TO TOP BUTTON (Smooth & Non-Intrusive) ---------- */
   const backToTopBtn = document.getElementById('back-to-top');
 
   if (backToTopBtn) {
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 400) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.pageYOffset > 400) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     }, { passive: true });
 
