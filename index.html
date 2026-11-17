@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chirag Jindani — AI & Data Science Engineer (B.Tech '28 @ GSV) & Business Strategist (BBA '29 @ IIM Bangalore). Geospatial automation builder, Deep Learning & LLM researcher.">
+  <meta name="author" content="Chirag Jindani">
+  <meta name="theme-color" content="#070709">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Chirag Jindani | AI & Data Science Portfolio">
+  <meta property="og:description" content="Dual-degree AI Engineer & Business Strategist. Ex-Intern @ Indian Railways & BISAG-N. Creator of GeoRef Tool.">
+  <meta property="og:type" content="website">
+
+  <title>Chirag Jindani — AI &amp; Data Science Scholar | IIM Bangalore &amp; GSV</title>
+
+  <!-- Google Fonts: Syne (Ultra-stylish display) & Plus Jakarta Sans (Crisp modern sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Maroon Glow Background -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-top"></div>
+    <div class="glow-orb glow-middle"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Chirag Jindani Homepage">
+        <span class="logo-mark">CJ</span>
+        <span class="logo-text">CHIRAG <span class="text-maroon">JINDANI</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#creative" class="nav-link">Creative</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons: Theme Toggle & CTA -->
+      <div class="header-actions">
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme Mode" title="Toggle Maroon Dark / Crimson Noir">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Direct Email Button -->
+        <a href="mailto:chiragjindani2006@gmail.com?subject=Internship%20Opportunity" class="btn btn-primary btn-sm">
+          <span>Let's Connect</span>
+          <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="menu-toggle" class="btn-icon mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="mobile-drawer" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a href="#about" class="mobile-nav-link">01. About</a>
+        <a href="#experience" class="mobile-nav-link">02. Experience</a>
+        <a href="#projects" class="mobile-nav-link">03. Projects</a>
+        <a href="#skills" class="mobile-nav-link">04. Skills</a>
+        <a href="#creative" class="mobile-nav-link">05. Creative &amp; Media</a>
+        <a href="#contact" class="mobile-nav-link">06. Contact</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <a href="mailto:chiragjindani2006@gmail.com" class="btn btn-primary btn-block">Email Chirag</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Left: Text & Pitch -->
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-pulse"></span>
+            <span>Open to AI &amp; Data Science Internships</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I’m <span class="highlight-text">Chirag Jindani</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">I build </span>
+            <span id="typewriter" class="typewriter-text"></span>
+            <span class="cursor">&nbsp;</span>
+          </div>
+
+          <p class="hero-description">
+            Dual-degree undergraduate bridging <strong>Artificial Intelligence &amp; Data Science</strong> at 
+            <strong>Gati Shakti Vishwavidyalaya</strong> and <strong>Digital Business &amp; Entrepreneurship</strong> at 
+            <strong>IIM Bangalore</strong>. Focused on engineering end-to-end software solutions, deep learning pipelines, 
+            and transformer-driven architectures that solve real operational bottlenecks.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <svg class="icon-inline" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="mailto:chiragjindani2006@gmail.com?subject=Internship%20Role%20Discussion" class="btn btn-secondary">
+              <span>Hire as Intern</span>
+            </a>
+          </div>
+
+          <!-- Social Quick Links Bar -->
+          <div class="social-strip">
+            <a href="https://github.com/CHIRAG-JINDANI" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/chirag-jindani-3785201b8/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://x.com/ChiragJindani" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/chiragjindani" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://vsco.co/chiraaaaag--/gallery" target="_blank" rel="noopener noreferrer" class="social-icon-btn vsco-btn" aria-label="VSCO Gallery">
+              <span class="vsco-text">VSCO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Editorial Framed Portrait Stage -->
+        <div class="hero-visual">
+          <div class="portrait-stage">
+            <div class="portrait-backdrop-monolith"></div>
+            <div class="portrait-crimson-ring"></div>
+            <div class="portrait-image-wrapper">
+              <img src="images/chirag-portrait-2.jpg" alt="Chirag Jindani standing in suit" class="portrait-photo">
+            </div>
+
+            <!-- Floating Credential Badges -->
+            <div class="floating-badge badge-top-left">
+              <span class="badge-icon">⚡</span>
+              <div>
+                <strong>B.Tech AI &amp; DS</strong>
+                <small>Gati Shakti Vishwavidyalaya</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <span class="badge-icon">🏛️</span>
+              <div>
+                <strong>BBA DBE</strong>
+                <small>IIM Bangalore</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="metrics-ribbon">
+        <div class="container metrics-grid">
+          <div class="metric-item">
+            <span class="metric-number" data-target="30">&lt;30s</span>
+            <span class="metric-label">Satellite Georeferencing Speed</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">2</span>
+            <span class="metric-label">Industry Internships Completed</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">Dual</span>
+            <span class="metric-label">B.Tech (AI/DS) + BBA (IIMB)</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">100%</span>
+            <span class="metric-label">Scratched Solutions Delivered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 // NARRATIVE</span>
+          <h2 class="section-title">Engineering Meets Strategic Execution</h2>
+          <p class="section-subtitle">A cross-disciplinary builder passionate about building practical software from clean slates.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card story-card">
+            <h3>Who I Am &amp; What Drives Me</h3>
+            <p>
+              I am an undergraduate engineer operating at the convergence of <strong>Artificial Intelligence, Data Systems, and Digital Economics</strong>. 
+              My academic foundation is built across two premier institutions: engineering rigor in AI &amp; Data Science at Gati Shakti Vishwavidyalaya, 
+              paired with strategic business modeling and digital entrepreneurship at IIM Bangalore.
+            </p>
+            <p>
+              Rather than theoretical prototypes, I thrive on <em>formulating solutions from scratch</em>. When presented with complex problem statements—such 
+              as georeferencing unstructured satellite imagery or streamlining transport data pipelines—I engineer full-fledged deployable software tools.
+            </p>
+            <div class="story-highlights">
+              <div class="highlight-pill">🧠 Transformer Architectures &amp; LLM Service</div>
+              <div class="highlight-pill">🛰️ Computer Vision &amp; OpenCV</div>
+              <div class="highlight-pill">📈 Microeconomics &amp; Tech Systems</div>
+              <div class="highlight-pill">📸 Visual Storytelling &amp; Copywriting</div>
+            </div>
+          </div>
+
+          <div class="about-sidebar">
+            <!-- Academic Split Card -->
+            <div class="about-card education-card">
+              <h3>Academic Journey</h3>
+              <div class="edu-timeline">
+                <div class="edu-item">
+                  <div class="edu-dot"></div>
+                  <div class="edu-details">
+                    <span class="edu-period">2024 – 2028</span>
+                    <h4>B.Tech in Artificial Intelligence &amp; Data Science</h4>
+                    <p class="edu-inst">Gati Shakti Vishwavidyalaya (Central University under Ministry of Railways)</p>
+                    <span class="edu-badge">Vadodara, Gujarat</span>
+                  </div>
+                </div>
+                <div class="edu-item">
+                  <div class="edu-dot"></div>
+                  <div class="edu-details">
+                    <span class="edu-period">2026 – 2029</span>
+                    <h4>BBA in Digital Business &amp; Entrepreneurship</h4>
+                    <p class="edu-inst">Indian Institute of Management Bangalore (IIM Bangalore)</p>
+                    <span class="edu-badge">Bengaluru, Karnataka</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Leadership Mini Card -->
+            <div class="about-card leadership-card">
+              <div class="card-icon-header">
+                <span class="icon-accent">🖋️</span>
+                <h4>Positions of Responsibility</h4>
+              </div>
+              <p class="lead-role"><strong>Co-Coordinator</strong> — Literary Club</p>
+              <p class="lead-desc">Leading editorial initiatives, inter-college debates, creative copywriting, and student publication events at Gati Shakti Vishwavidyalaya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE SECTION ================= -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 // TRACK RECORD</span>
+          <h2 class="section-title">Industry Internships</h2>
+          <p class="section-subtitle">Real-world engineering challenges solved under high-standard national organizations.</p>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- Item 1: BISAG-N -->
+          <article class="exp-card active-exp">
+            <div class="exp-header">
+              <div class="exp-role-group">
+                <div class="company-badge-logo">BISAG-N</div>
+                <div>
+                  <h3 class="exp-title">Summer Intern — Computer Vision &amp; Geospatial Automation</h3>
+                  <p class="exp-org">Bhaskaracharya National Institute for Space Applications and Geo-informatics</p>
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-time">May 2026 – Jul 2026 · 3 mos</span>
+                <span class="exp-location">Gandhinagar, Gujarat · On-site</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p>
+                Confronted an operational data bottleneck where scientists and analysts spent 15–20 minutes manually calibrating, 
+                aligning, and georeferencing individual raw satellite images.
+              </p>
+              <ul class="exp-deliverables">
+                <li>Designed and deployed an <strong>automated geospatial conversion web pipeline</strong> that processes raw satellite imagery (JPEG/PNG) into calibrated, georeferenced GeoTIFF files in <strong>under 30 seconds</strong>.</li>
+                <li>Utilized <strong>Python, OpenCV, raster transformation algorithms</strong>, and web architecture to deliver a production-ready application deployed for analysts.</li>
+                <li>Produced comprehensive documentation and Loom architectural walkthrough demonstrated to technical teams.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Python</span>
+                <span class="tag">Geospatial Automation</span>
+                <span class="tag">Web Architecture</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Indian Railways -->
+          <article class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role-group">
+                <div class="company-badge-logo ir-logo">IR</div>
+                <div>
+                  <h3 class="exp-title">Summer Intern — Technical &amp; Operational Systems</h3>
+                  <p class="exp-org">Indian Railways (Ministry of Railways, Govt. of India)</p>
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-time">May 2025 · 1 mo</span>
+                <span class="exp-location">Vadodara, Gujarat · On-site</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p>
+                Gained deep on-ground exposure to national transit infrastructure, operational workflows, and the mission-critical 
+                engineering protocols that keep the Indian railway network running efficiently.
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Infrastructure Systems</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Operations</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PROJECTS SECTION ================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03 // SELECTED BUILD</span>
+          <h2 class="section-title">Built From Scratch</h2>
+          <p class="section-subtitle">Real problem statements engineered into production-ready software.</p>
+        </div>
+
+        <!-- Featured Project Showcase Box -->
+        <article class="project-showcase">
+          <div class="project-grid">
+            <div class="project-info">
+              <div class="project-header-pill">FEATURED WORK · COMPUTER VISION &amp; GEOSPATIAL</div>
+              <h3 class="project-title">GeoRef Tool — Satellite Image Georeferencing Automation</h3>
+              <p class="project-lead">
+                A browser-based geospatial solution that converts raw non-referenced satellite images (PNG/JPEG) into 
+                georeferenced GeoTIFF rasters in under 30 seconds with zero proprietary software dependencies.
+              </p>
+
+              <div class="project-metrics">
+                <div class="pm-box">
+                  <strong>30x</strong>
+                  <span>Faster Workflow</span>
+                </div>
+                <div class="pm-box">
+                  <strong>&lt;30s</strong>
+                  <span>Processing Time</span>
+                </div>
+                <div class="pm-box">
+                  <strong>0</strong>
+                  <span>Cost / Open Web</span>
+                </div>
+              </div>
+
+              <div class="project-bullet-points">
+                <div class="pb-item">
+                  <span class="pb-check">✓</span>
+                  <span>Solves a multi-step GIS bottleneck replacing cumbersome QGIS/ArcGIS alignment for standard tiles.</span>
+                </div>
+                <div class="pb-item">
+                  <span class="pb-check">✓</span>
+                  <span>Interactive web UI with live preview, tie-point selection, and instant GeoTIFF export.</span>
+                </div>
+                <div class="pb-item">
+                  <span class="pb-check">✓</span>
+                  <span>Documented and verified with Loom video demo and LinkedIn community reception.</span>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Vercel</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://georef-tool.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  <span>Launch Live Tool</span>
+                  <svg class="icon-inline" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h4a.75.75 0 010 1.5h-4z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06 1.06l7.22-7.22v2.657a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.657l-7.22 7.22z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+                <a href="https://github.com/CHIRAG-JINDANI" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  <span>View GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Visual & LinkedIn Embed Interactive Card -->
+            <div class="project-visual-pane">
+              <div class="preview-browser-frame">
+                <div class="browser-header">
+                  <div class="browser-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address">georef-tool.vercel.app</div>
+                </div>
+                <div class="browser-body">
+                  <div class="browser-hero-preview">
+                    <div class="preview-badge">🛰️ GEOSPATIAL AUTOMATION</div>
+                    <h4>GeoRef Interactive Web Platform</h4>
+                    <p>Automated conversion pipeline from satellite image to calibrated GIS GeoTIFF.</p>
+                    <a href="https://georef-tool.vercel.app" target="_blank" rel="noopener noreferrer" class="preview-link-chip">
+                      <span>Visit georef-tool.vercel.app ↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LinkedIn Proof Card -->
+              <div class="proof-card">
+                <div class="proof-header">
+                  <svg class="linkedin-blue-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <div>
+                    <strong>Demonstrated on LinkedIn</strong>
+                    <small>With Loom walkthrough &amp; architecture post</small>
+                  </div>
+                </div>
+                <p class="proof-text">"Built an end-to-end geospatial automation tool that converts any raw satellite image into a georeferenced GeoTIFF in under 30 seconds."</p>
+                <a href="https://www.linkedin.com/in/chirag-jindani-3785201b8/" target="_blank" rel="noopener noreferrer" class="proof-action">
+                  <span>View Original Post on LinkedIn ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 // COMPETENCIES</span>
+          <h2 class="section-title">Technical Matrix &amp; Stack</h2>
+          <p class="section-subtitle">Categorized competencies spanning AI research, software engineering, and strategic communication.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Data Science</button>
+          <button class="filter-btn" data-filter="engineering">Software &amp; Web</button>
+          <button class="filter-btn" data-filter="strategy">Business &amp; Creative</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1: AI & Deep Learning -->
+          <div class="skill-category-card" data-category="ai">
+            <div class="cat-header">
+              <span class="cat-icon">🤖</span>
+              <h3>AI &amp; Deep Learning</h3>
+            </div>
+            <p class="cat-desc">Model development, neural networks, and inference serving.</p>
+            <div class="skill-pills">
+              <span class="skill-pill">Deep Learning</span>
+              <span class="skill-pill">Transformer Architectures</span>
+              <span class="skill-pill">LLMs &amp; Serving</span>
+              <span class="skill-pill">Computer Vision</span>
+              <span class="skill-pill">OpenCV</span>
+              <span class="skill-pill">Neural Networks</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Software Engineering & Web -->
+          <div class="skill-category-card" data-category="engineering">
+            <div class="cat-header">
+              <span class="cat-icon">⚙️</span>
+              <h3>Languages &amp; Web Dev</h3>
+            </div>
+            <p class="cat-desc">Building resilient systems, scripts, and frontends.</p>
+            <div class="skill-pills">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3 &amp; Flexbox/Grid</span>
+              <span class="skill-pill">JavaScript &amp; DOM</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Design & Product -->
+          <div class="skill-category-card" data-category="strategy">
+            <div class="cat-header">
+              <span class="cat-icon">📐</span>
+              <h3>Product &amp; UI Design</h3>
+            </div>
+            <p class="cat-desc">User journeys, wireframing, and interactive design.</p>
+            <div class="skill-pills">
+              <span class="skill-pill">Figma UI/UX</span>
+              <span class="skill-pill">Wireframing</span>
+              <span class="skill-pill">Visual Hierarchy</span>
+              <span class="skill-pill">Design Systems</span>
+              <span class="skill-pill">Usability Testing</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Business, Writing & Strategy -->
+          <div class="skill-category-card" data-category="strategy">
+            <div class="cat-header">
+              <span class="cat-icon">💡</span>
+              <h3>Strategy &amp; Communication</h3>
+            </div>
+            <p class="cat-desc">Market thinking, analytical clarity, and persuasive narrative.</p>
+            <div class="skill-pills">
+              <span class="skill-pill">Economics</span>
+              <span class="skill-pill">Copywriting</span>
+              <span class="skill-pill">Digital Business Models</span>
+              <span class="skill-pill">Problem Structuring</span>
+              <span class="skill-pill">Public Speaking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CREATIVE & MEDIA SECTION ================= -->
+    <section class="section creative-section" id="creative">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">05 // PERSPECTIVES</span>
+          <h2 class="section-title">Visual Storytelling &amp; Creative Drive</h2>
+          <p class="section-subtitle">Beyond algorithms: capturing moments through photography, short-form video, and tactical sports.</p>
+        </div>
+
+        <div class="creative-grid">
+          <!-- Card 1: Photography / VSCO -->
+          <article class="creative-card vsco-feature-card">
+            <div class="creative-card-inner">
+              <div class="creative-tag">LENS &amp; COMPOSITION</div>
+              <h3>Visual Photography Archive</h3>
+              <p>
+                A documented collection of street, architectural, and nature frames exploring light, contrast, and color grading. 
+                Documenting candid perspectives through high-fidelity visual composition.
+              </p>
+              <div class="creative-meta-strip">
+                <span>VSCO Curated Gallery</span>
+                <span>•</span>
+                <span>@chiraaaaag--</span>
+              </div>
+              <a href="https://vsco.co/chiraaaaag--/gallery" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <span>Open VSCO Gallery ↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Short-Form Content / Reels -->
+          <article class="creative-card insta-feature-card">
+            <div class="creative-card-inner">
+              <div class="creative-tag">DIGITAL ENGAGEMENT</div>
+              <h3>Short-Form Reels &amp; Creative Editing</h3>
+              <p>
+                Experimenting with pacing, audio dynamics, and visual hooks across Instagram reels. 
+                Analyzing digital audience retention and engagement algorithms.
+              </p>
+              <div class="creative-meta-strip">
+                <span>Instagram Profile</span>
+                <span>•</span>
+                <span>@chiragjindani</span>
+              </div>
+              <a href="https://instagram.com/chiragjindani" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <span>View Instagram Reels ↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Analytical Pursuits: Chess & Football -->
+          <article class="creative-card tactical-card">
+            <div class="creative-card-inner">
+              <div class="creative-tag">STRATEGY &amp; AGILITY</div>
+              <h3>Chess &amp; Competitive Football</h3>
+              <p>
+                <strong>Chess:</strong> Positional thinking, foresight, pattern recognition, and anticipating adversarial moves under time clocks.<br>
+                <strong>Football:</strong> High-paced teamwork, spatial awareness, stamina, and tactical pitch communication.
+              </p>
+              <div class="tactical-chips">
+                <span class="t-chip">♟️ Tactical Foresight</span>
+                <span class="t-chip">⚽ Pitch Spatial Awareness</span>
+                <span class="t-chip">⚡ Quick Decision Making</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT & CONNECT SECTION ================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-content">
+            <span class="section-tag">06 // INITIATE DIALOGUE</span>
+            <h2 class="contact-title">Ready to Build &amp; Solve Real Problems.</h2>
+            <p class="contact-desc">
+              Currently actively exploring <strong>AI, Data Science, and Software Internship opportunities</strong>. 
+              Whether you have a demanding technical challenge, a data problem statement, or want to collaborate on a high-impact build, 
+              my inbox is always open.
+            </p>
+
+            <div class="contact-direct-info">
+              <div class="contact-info-row">
+                <span class="ci-label">Email:</span>
+                <a href="mailto:chiragjindani2006@gmail.com" class="ci-value">chiragjindani2006@gmail.com</a>
+                <button class="copy-btn" data-copy="chiragjindani2006@gmail.com" title="Copy Email">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-text">Copy</span>
+                </button>
+              </div>
+
+              <div class="contact-info-row">
+                <span class="ci-label">Phone:</span>
+                <a href="tel:+917737432006" class="ci-value">+91 77374 32006</a>
+                <button class="copy-btn" data-copy="+917737432006" title="Copy Phone">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-text">Copy</span>
+                </button>
+              </div>
+
+              <div class="contact-info-row">
+                <span class="ci-label">Location:</span>
+                <span class="ci-value">Vadodara, Gujarat &amp; Bengaluru, India</span>
+              </div>
+            </div>
+
+            <div class="contact-buttons">
+              <a href="mailto:chiragjindani2006@gmail.com?subject=Internship%20Opportunity" class="btn btn-primary btn-lg">
+                <span>Send Direct Email</span>
+                <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/chirag-jindani-3785201b8/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+                <span>Connect on LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">CHIRAG JINDANI</span>
+        <p class="footer-sub">B.Tech ’28 (AI &amp; Data Science) · BBA ’29 (IIM Bangalore) · Roll No: 26120364</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/CHIRAG-JINDANI" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/chirag-jindani-3785201b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://x.com/ChiragJindani" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        <a href="https://instagram.com/chiragjindani" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://vsco.co/chiraaaaag--/gallery" target="_blank" rel="noopener noreferrer">VSCO</a>
+      </div>
+
+      <div class="footer-right">
+        <p class="copyright">Designed &amp; Hand-Coded in HTML5, CSS3 &amp; Vanilla JS · 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Floating Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
