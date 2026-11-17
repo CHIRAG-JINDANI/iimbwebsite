@@ -749,14 +749,12 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 54%;
-  transform: scale(2.05);
-  transform-origin: center 54%;
+  object-position: center top;
   transition: transform var(--transition-smooth);
 }
 
 .portrait-stage:hover .portrait-photo {
-  transform: scale(2.15);
+  transform: scale(1.03);
 }
 
 /* Floating Badges */
