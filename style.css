@@ -1175,6 +1175,11 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-card);
   position: relative;
   overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.project-showcase:last-child {
+  margin-bottom: 0;
 }
 
 .project-showcase::before {
